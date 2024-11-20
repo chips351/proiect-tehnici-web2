@@ -1,0 +1,317 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+    padding-top: 80px; 
+    overflow-x: hidden; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    z-index: 9999; 
+}
+
+.head1 {
+    display: inline-flex;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 15px;
+    gap: 0;
+}
+
+.redVlad {
+    color: red;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 45px;
+}
+
+.menu-log {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 25px;
+    border: 2px solid red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+    padding: 0px;
+}
+
+.dropdown-content a {
+    display: block;
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+}
+
+.menu-log:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.signin-form {
+    display: none;
+    padding: 10px;
+}
+
+.signin-input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.signin-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: font-size 0.3s ease;
+}
+
+a:hover {
+    font-size: 19px;
+}
+
+.body_sec_preturi {
+    padding: 15px;
+    font-family: sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.content_preturi {
+    text-align: center;
+    padding: 22px;
+    text-shadow: 2px 2px 5px gray;
+}
+
+.planuri {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.CASUAL, .INTERMEDIAR, .AVANSAT {
+    padding: 20px;
+    border: 2px solid #ccc;
+    background-color: #ebebeb;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.CASUAL:hover, .INTERMEDIAR:hover, .AVANSAT:hover {
+    transform: translateY(-10px);
+    background-color: #f4f2f2;
+}
+
+.planuri h2{
+    text-align: center;
+
+}
+
+.planuri h3 {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.CASUAL h2{
+    color: rgb(231, 152, 4);
+}
+
+.INTERMEDIAR h2{
+    color: rgb(42, 163, 203);
+}
+
+
+.AVANSAT h2{
+    color: green;
+}
+.planuri p {
+    font-size: 15px;
+    text-align: center;
+}
+
+.planuri ul li {
+    list-style: none;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.btn-cumpara {
+    margin-top: auto;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cumpara:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    .planuri {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .CASUAL, .INTERMEDIAR, .AVANSAT {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .planuri {
+        grid-template-columns: 1fr;
+    }
+
+    .CASUAL, .INTERMEDIAR, .AVANSAT {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* Reduce font size for medium screens */
+    .head1 {
+        font-size: 18px; /* smaller font for medium screens */
+    }
+
+    .menu a {
+        font-size: 14px; /* smaller menu text */
+    }
+
+    .menu-log a {
+        font-size: 14px; /* smaller login text */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Make the header font even smaller for mobile screens */
+    .head1 {
+        font-size: 16px; /* smaller font for mobile */
+    }
+
+    .menu {
+        gap: 20px; /* smaller gap between menu items */
+    }
+
+    .menu a {
+        font-size: 12px; /* even smaller menu text */
+    }
+
+    .menu-log a {
+        font-size: 12px; /* smaller login text */
+    }
+
+    /* Dropdown menu adjustments */
+    .dropdown-content a {
+        font-size: 12px; /* smaller text for dropdown */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Make header more compact on very small screens */
+    header {
+        padding: 0 10px; /* Reduce padding for tight screens */
+    }
+
+    .head1 {
+        font-size: 14px; /* smallest font size */
+    }
+
+    .menu a {
+        font-size: 12px; /* even smaller text for navigation */
+    }
+
+    .menu-log a {
+        font-size: 12px; /* smaller login text */
+    }
+
+    .menu {
+        gap: 15px; /* further reduce the gap between items */
+    }
+}

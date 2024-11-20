@@ -1,0 +1,431 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+    padding-top: 80px; 
+    overflow-x: hidden; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    z-index: 9999; 
+}
+
+.head1 {
+    display: inline-flex;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 15px;
+    gap: 0;
+}
+
+.redVlad {
+    color: red;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 45px;
+}
+
+.menu-log {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 25px;
+    border: 2px solid red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+    padding-right: 20px;
+    padding: 20px;
+}
+
+.dropdown-content a {
+    color: black;
+    background-color: white;
+    padding: 8px 8px;
+    text-decoration: none;
+    transition: 
+        color 0.3s ease, 
+        background-color 0.5s ease 0.2s, 
+        padding 0.7s ease 0.4s;
+    
+}
+
+.dropdown-content a:hover {
+    color: white;
+    background-color: coral;
+    padding: 12px 15px;
+}
+
+.menu-log:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.signin-form {
+    display: none;
+    padding: 5px;
+}
+
+.signin-input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.signin-btn:hover {
+    background-color: #45a049;
+}
+
+.menu-log:hover .signin-form {
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: font-size 0.3s ease;
+}
+
+a:hover {
+    font-size: 19px;
+}
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /*fara scroll orizontal*/
+    min-height: 100vh;
+    flex-direction: column; /*orientarea pt structurii paginii*/
+    padding-top: 80px;
+}
+
+.content { 
+    display: flex;
+    justify-content: center; 
+    font-family: fantasy;
+    font-style: italic;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 30px; 
+    color: black; 
+    text-shadow: 2px 2px 5px red;
+}
+
+.sub {
+    display: flex;
+    justify-content: center; 
+    margin-top: -25px;
+    font-size: 25px;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.photo-gallery img {
+    width: 325px;
+    height: 200px;
+    display: block;
+}
+
+.poza {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.poza a { 
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.poza a:hover {
+    transform: translateY(-10px); 
+}
+
+.poza img:hover{
+    box-shadow: 14px 14px 19px rgba(0, 0, 0, 0.4);
+}
+
+.poza a:hover .nivel {
+    transform: translateY(-10px); 
+}
+
+.nivel {
+    font-size: 18px;
+    margin-top: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    padding: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.poza .descriere, .obiectiv {
+    max-width: 325px;
+    word-wrap: break-word; /* pentru cuvintele lungi care nu incap */
+    overflow-wrap: break-word;
+    font-family: sans-serif;
+}
+
+.obiectiv{
+    font-size: 21px;
+    margin-top: 15px;
+}
+
+.descriere{
+    max-width: 325px; 
+    padding: 20px;
+    font-size: 18px;
+    margin-bottom: 45px;
+    color: rgb(58, 56, 56);
+}
+
+.more{
+    display: none;
+}
+
+.myBtn, .descriere p{
+    display : inline;
+}
+
+.myBtn{
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    color: inherit;
+    font-size: 15px;
+    transition: font-size 0.3s ease;
+    font-style: inherit;
+}
+
+.myBtn:hover {
+    color: rgb(40, 91, 193);
+    font-size: 18px;
+}
+
+.contentsub {
+    background-image: url("grayBackground.jpg");
+    background-size: cover;
+}
+
+.contentsub h2{
+    display: none;
+}
+
+.photo-gallery h2{
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    align-items: center;
+    height: 35px;
+}
+
+body {
+    font-size: 16px; 
+    line-height: 1.6; 
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .head1 {
+        font-size: 18px; 
+    }
+
+    .menu a {
+        font-size: 14px; 
+    }
+
+    .menu-log a {
+        font-size: 14px; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .head1 {
+        font-size: 16px; 
+    }
+
+    .menu {
+        gap: 20px; 
+    }
+
+    .menu a {
+        font-size: 12px; 
+    }
+
+    .menu-log a {
+        font-size: 12px; 
+    }
+
+    .dropdown-content a {
+        font-size: 12px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 0 10px; 
+    }
+
+    .head1 {
+        font-size: 14px; 
+    }
+
+    .menu a {
+        font-size: 12px; 
+    }
+
+    .menu-log a {
+        font-size: 12px; 
+    }
+
+    .menu {
+        gap: 15px; 
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .photo-gallery {
+        justify-content: center; 
+    }
+
+    .poza {
+        width: 100%; 
+        max-width: 325px; 
+    }
+
+    .photo-gallery img {
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .photo-gallery {
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .poza {
+        width: 80%; 
+        margin-bottom: 20px; 
+    }
+
+    .photo-gallery img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .nivel {
+        font-size: 16px; 
+    }
+
+    .obiectiv, .descriere {
+        font-size: 14px; 
+    }
+
+    .myBtn {
+        font-size: 14px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .photo-gallery {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .poza {
+        width: 90%; 
+        margin-bottom: 15px; 
+    }
+
+    .photo-gallery img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .nivel {
+        font-size: 14px; 
+    }
+
+    .obiectiv, .descriere {
+        font-size: 12px; 
+    }
+
+    .myBtn {
+        font-size: 12px; 
+    }
+}

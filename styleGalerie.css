@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+    padding-top: 80px; 
+    overflow-x: hidden; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    z-index: 9999; 
+}
+
+.head1 {
+    display: inline-flex;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 15px;
+    gap: 0;
+}
+
+.redVlad {
+    color: red;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 45px;
+}
+
+.menu-log {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 25px;
+    border: 2px solid red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+    padding: 0px;
+}
+
+.dropdown-content a {
+    display: block;
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+}
+
+.menu-log:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.signin-form {
+    display: none;
+    padding: 10px;
+}
+
+.signin-input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.signin-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: font-size 0.3s ease;
+}
+
+a:hover {
+    font-size: 19px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    gap: 6px;
+    padding: 15px;
+    margin-bottom: 3%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+img.four-grid-cells {
+    grid-row: span 2 / auto;
+    grid-column: span 2 / auto;
+}
+
+img.wide-image {
+    grid-column: span 2 / auto;
+}
+  
+  .image-grid img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+body h1{
+    background-image: url("grayBackground.jpg");
+    background-size: cover;
+    padding: 40px;
+    font-family: fantasy;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 30px; 
+    color: black; 
+    text-shadow: 2px 2px 5px red;
+}
+  
+  @media screen and (max-width: 768px) {
+    .gallery {
+         grid-template-columns: 1fr 1fr;
+     }
+ }
+
+ @media screen and (max-width: 480px) {
+
+        div.gallery {
+            grid-template-columns: 1fr;
+        }
+    
+        img.four-grid-cells {
+            grid-row: auto;
+            grid-column: auto;
+        }
+    
+        img.wide-image {
+            grid-column: auto;
+        }
+    
+    }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    /* Reduce font size for medium screens */
+    .head1 {
+        font-size: 18px; /* smaller font for medium screens */
+    }
+
+    .menu a {
+        font-size: 14px; /* smaller menu text */
+    }
+
+    .menu-log a {
+        font-size: 14px; /* smaller login text */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Make the header font even smaller for mobile screens */
+    .head1 {
+        font-size: 16px; /* smaller font for mobile */
+    }
+
+    .menu {
+        gap: 20px; /* smaller gap between menu items */
+    }
+
+    .menu a {
+        font-size: 12px; /* even smaller menu text */
+    }
+
+    .menu-log a {
+        font-size: 12px; /* smaller login text */
+    }
+
+    /* Dropdown menu adjustments */
+    .dropdown-content a {
+        font-size: 12px; /* smaller text for dropdown */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Make header more compact on very small screens */
+    header {
+        padding: 0 10px; /* Reduce padding for tight screens */
+    }
+
+    .head1 {
+        font-size: 14px; /* smallest font size */
+    }
+
+    .menu a {
+        font-size: 12px; 
+    }
+
+    .menu-log a {
+        font-size: 12px; /* smaller login text */
+    }
+
+    .menu {
+        gap: 15px; /* further reduce the gap between items */
+    }
+}
