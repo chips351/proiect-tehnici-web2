@@ -155,7 +155,7 @@ img.wide-image {
 }
   
   .image-grid img:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05); 
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   }
 
@@ -207,52 +207,26 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
-    /* Reduce font size for medium screens */
     .head1 {
-        font-size: 18px; /* smaller font for medium screens */
+        font-size: 18px; 
     }
 
     .menu a {
-        font-size: 14px; /* smaller menu text */
+        font-size: 14px;
     }
 
     .menu-log a {
-        font-size: 14px; /* smaller login text */
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    /* Make the header font even smaller for mobile screens */
     .head1 {
-        font-size: 16px; /* smaller font for mobile */
+        font-size: 16px;
     }
 
     .menu {
-        gap: 20px; /* smaller gap between menu items */
-    }
-
-    .menu a {
-        font-size: 12px; /* even smaller menu text */
-    }
-
-    .menu-log a {
-        font-size: 12px; /* smaller login text */
-    }
-
-    /* Dropdown menu adjustments */
-    .dropdown-content a {
-        font-size: 12px; /* smaller text for dropdown */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* Make header more compact on very small screens */
-    header {
-        padding: 0 10px; /* Reduce padding for tight screens */
-    }
-
-    .head1 {
-        font-size: 14px; /* smallest font size */
+        gap: 20px; 
     }
 
     .menu a {
@@ -260,10 +234,32 @@ footer {
     }
 
     .menu-log a {
-        font-size: 12px; /* smaller login text */
+        font-size: 12px; 
+    }
+
+    .dropdown-content a {
+        font-size: 12px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0 10px; 
+    }
+
+    .head1 {
+        font-size: 14px;
+    }
+
+    .menu a {
+        font-size: 12px; 
+    }
+
+    .menu-log a {
+        font-size: 12px; 
     }
 
     .menu {
-        gap: 15px; /* further reduce the gap between items */
+        gap: 15px;
     }
 }
